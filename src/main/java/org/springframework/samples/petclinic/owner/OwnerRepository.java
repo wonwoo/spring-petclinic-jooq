@@ -103,7 +103,9 @@ public class OwnerRepository {
                 List<Pet> pets = records.sortAsc(OWNER.ID)
                     .stream()
                     .filter(record -> record.get(PET_TYPE.ID) != null)
-                    .map(record -> new Pet(record.get(PET.ID), record.get(PET.NAME), record.get(PET.BIRTH_DATE), record.into(PetType.class), null, null)).collect(toList());
+                    .map(record -> new Pet(record.get(PET.ID), record.get(PET.NAME), record.get(PET.BIRTH_DATE),
+                        record.into(PetType.class), null, null))
+                    .collect(toList());
                 return new Owner(record6s.value1(), record6s.value2(),
                     record6s.value3(), record6s.value4(), record6s.value5(), record6s.value6(), new HashSet<>(pets));
             }).findFirst()
