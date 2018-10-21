@@ -50,7 +50,7 @@ public class VisitRepository {
      * @param visit the <code>Visit</code> to save
      */
     @Transactional
-    public void save(Visit visit) throws DataAccessException {
+    public void save(Visit visit) {
         this.dsl.insertInto(VISIT)
             .columns(VISIT.DATE, VISIT.DESCRIPTION, VISIT.PET_ID)
             .values(visit.getDate(), visit.getDescription(), visit.getPetId())
