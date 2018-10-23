@@ -9,7 +9,7 @@ Petclinic is a https://spring.io/guides/gs/spring-boot[Spring Boot] application 
 
 ```
 git clone https://github.com/wonwoo/spring-petclinic-jooq.git
-cd spring-petclinic
+cd spring-petclinic-jooq
 ./mvnw jooq-codegen:generate -P hsqldb or mysql
 ./mvnw package
 java -jar target/*.jar
